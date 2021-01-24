@@ -1,5 +1,5 @@
 // ШИФРОВКА
-let encryptionText = document.querySelector('#encryption');
+const encryptionText = document.querySelector('#encryption');
 
 encryptionText.addEventListener('input', function({ target }) {
     // смещение
@@ -16,11 +16,11 @@ encryptionText.addEventListener('input', function({ target }) {
         out += String.fromCharCode(code);
     }
     // выводим строку в новый элемент
-    document.querySelector('#encryption-out').innerHTML = out;
+    document.querySelector('#encryption-out').textContent = out;
 });
 
 // РАСШИФРОВКА
-let transcriptText = document.querySelector('#transcript');
+const transcriptText = document.querySelector('#transcript');
 
 transcriptText.addEventListener('input', function({ target }) {
     const offset = 3;
@@ -31,5 +31,5 @@ transcriptText.addEventListener('input', function({ target }) {
         code -= offset;
         out += String.fromCharCode(code);
     }
-    document.querySelector('#transcript-out').innerHTML = out;
+    document.querySelector('#transcript-out').textContent = out;
 });
